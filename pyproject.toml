@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "iac-demo"
+version = "0.1.0"
+description = ""
+authors = ["enochhz <test@gmail.com>"]
+readme = "README.md"
+packages = [
+    {include = "*", from = "src"}
+]
+
+[tool.poetry.scripts]
+hello = "hello_app.hello_main:main"
+bye = "bye_app.bye_main:main"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pytest = "^8.3.3"
+requests = "^2.32.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
